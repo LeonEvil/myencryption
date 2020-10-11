@@ -1,4 +1,5 @@
 import Calc
+import Cryptography
 
 
 def finalMessage(mod, key, alphabet, msg):
@@ -17,5 +18,10 @@ def finalMessage(mod, key, alphabet, msg):
             if i == 3:
                 i = 0
 
+            message += Cryptography.msgCryptography(n2, difference, mod).upper() if letter.isupper() else \
+                Cryptography.msgCryptography(n2, difference, mod).lower()
         else:
             message += letter
+
+    return message
+
