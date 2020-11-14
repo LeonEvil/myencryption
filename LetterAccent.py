@@ -12,5 +12,7 @@ def remove(letter):
         return "U" if letter.isupper() else "u"
     elif letter in ('ç', 'Ç',):
         return "C" if letter.isupper() else "c"
+    elif letter == " ":
+        return " "
     else:
         return ""
